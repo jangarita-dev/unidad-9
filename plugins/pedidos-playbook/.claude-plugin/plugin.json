@@ -1,6 +1,6 @@
 {
   "name": "pedidos-playbook",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Forma de trabajar de Pedidos Web: revisor, documentar-modulo, planificador-proyectos-web, guardián de .env/.pem, MCP de Claude Academy y plantillas de AGENTS.md y REVIEW.md",
   "author": { "name": "jangarita-dev" }
 }

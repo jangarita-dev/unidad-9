@@ -34,6 +34,10 @@ si el cambio implementa una historia.
 - Aplica `REVIEW.md` al pie de la letra: qué es Importante, el tope de Detalles, lo que no se reporta
   y los chequeos de «Revisar siempre».
 - Cada hallazgo lleva `archivo:línea` y el caso concreto en que falla. Sin evidencia, no lo reportas.
+- **Sin spec no hay funcionalidad (1.1.0):** si el cambio agrega o modifica comportamiento en `src/`
+  y no hay una spec en `specs/<historia>/spec.md` que lo pida (ni en la rama ni en `origin/main`),
+  repórtalo como **Importante**: «Cambio de comportamiento sin spec aprobada». Los refactors sin
+  cambio de comportamiento y los cambios solo en `docs/` o `tests/` no lo necesitan.
 
 ## 4. Formato de la respuesta (en español)
 
