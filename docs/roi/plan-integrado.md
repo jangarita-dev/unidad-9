@@ -18,7 +18,7 @@ Un equipo de 6 desarrolladores trabajó 6 semanas como siempre y 6 semanas con C
 - **Más rápido:** un cambio tarda 4,4 días en llegar a producción, antes tardaba 6,6. Se despliega 3,5 veces por semana, antes 2.
 - **Más estable:** fallan el 21 % de los despliegues (antes el 42 %) y escapa 1 defecto por semana (antes 2).
 - **Costo de aprender:** las 2 primeras semanas con IA fueron peores que antes. Lo contamos como costo.
-- **ROI a 6 meses: entre 81 % y 148 %** (costo USD 3.300 por 6 devs). Lo que más lo mueve son las horas ahorradas, que reporta el propio equipo: si son la mitad, el ROI baja a 14 %.
+- **ROI a 6 meses: entre 81 % y 148 %** (costo USD 3.300 por 6 devs). Lo que más lo mueve son las horas ahorradas, que reporta el propio equipo: si son la mitad, el ROI baja a 14 %. Para cubrir el costo basta con ahorrar 2,4 h por dev al mes; el piloto midió 6,1.
 
 ### 4. Recomendación
 Extender la forma de trabajar de Pedidos Web a un equipo más (Bodega) durante 3 meses, con un costo de referencia de USD 3.300 por cada 6 devs en 6 meses, y decidir el resto de la BU con esos datos.
@@ -64,9 +64,20 @@ Respaldo: `plugins/pedidos-playbook/` (U9). `docs/gobernanza/politica-ia.md` (U8
 - **Supuestos clave:** asiento USD 25 por dev al mes (oficial); horas ahorradas y defectos evitados (medidos en el piloto); valor hora USD 20, capacitación y curva de 10 h por dev cada una, y USD 120 por defecto (estimados).
 - **Escenarios:** costo de USD 3.300 frente a un beneficio de USD 5.980 (conservador) o USD 8.180 (optimista). El ROI queda entre 81 % y 148 %.
 - **Sensibilidad:** si el ahorro es la mitad, el ROI es 14 %; si también los defectos evitados son la mitad, el ROI es −9 %.
-- **Punto de equilibrio:** pendiente. Es el reto de la sección 6 del modelo.
+- **Punto de equilibrio:** 2,4 h ahorradas por dev al mes (ver la sección siguiente).
 
 Respaldo: `docs/roi/modelo-roi.md`. En este repo, `docs/migracion/defectos-corregidos.md` (U5) sigue siendo plantilla: FALTA.
+
+### Punto de equilibrio
+**Basta con que cada dev ahorre 2,4 horas al mes para cubrir el costo; el piloto midió 6,1, más del doble.**
+
+| Caso | Horas por dev al mes |
+|---|---|
+| ROI = 0, con los defectos evitados del escenario conservador | 2,4 |
+| ROI = 0, sin contar los defectos evitados | 4,6 |
+| Medido en el piloto (conservador · optimista) | 6,1 · 7,5 |
+
+Cálculo: con ROI = 0, el beneficio es igual al costo (USD 3.300). Se despejan las horas: (3.300 − 1.560) / USD 20 = 87 h del equipo en 6 meses, y 87 / 6 devs / 6 meses = 2,4 h. Respaldo: `docs/roi/modelo-roi.md`, sección 6.
 
 ### Evolución
 | Equipo | Hoy | Meta a 6 meses |

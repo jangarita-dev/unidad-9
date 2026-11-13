@@ -85,7 +85,26 @@ Si el ahorro real es la mitad de lo medido, el ROI apenas queda positivo. Hay qu
 
 ## 6. Punto de equilibrio (Tu reto)
 
-<Escríbelo tú: qué despejas, el resultado y una línea para la gerencia.>
+**Pregunta:** ¿cuántas horas ahorradas por dev al mes dejan el ROI en 0?
+
+**Qué se despeja y qué queda fijo:** se despejan las horas ahorradas. Queda fijo todo lo demás del escenario conservador: costo total USD 3.300, valor hora USD 20, defectos evitados USD 1.560, 6 devs y 6 meses.
+
+**Despeje paso a paso:**
+
+1. ROI = 0 ⇔ beneficio − costo = 0 ⇔ beneficio = costo = USD 3.300.
+2. Beneficio = horas × USD 20 + USD 1.560 = USD 3.300.
+3. Horas × 20 = 3.300 − 1.560 = 1.740 → horas = 1.740 / 20 = **87 h del equipo en 6 meses**.
+4. Por dev al mes: 87 / 6 devs / 6 meses = **2,4 h por dev al mes** (unos 33 minutos por dev a la semana: 87 / 26 / 6 = 0,56 h).
+5. Comprobación: 87 × 20 + 1.560 = 3.300 → (3.300 − 3.300) / 3.300 = 0 %. ✔
+
+| Caso | Horas por dev al mes |
+|---|---|
+| **Punto de equilibrio**, con los defectos evitados del escenario conservador | **2,4** |
+| Punto de equilibrio sin contar los defectos evitados (3.300 / 20 = 165 h) | 4,6 |
+| Medido en el piloto, conservador (221 h / 6 devs / 6 meses) | 6,1 |
+| Medido en el piloto, optimista (271 h / 6 devs / 6 meses) | 7,5 |
+
+**Para la gerencia, en una línea:** basta con que cada dev ahorre 2,4 horas al mes para cubrir el costo; el piloto midió 6,1, más del doble.
 
 ## 7. Limitaciones
 
