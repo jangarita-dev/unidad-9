@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>{{titulo}}</title>
+<style>
+  @page { size: A4; margin: 22mm 18mm 20mm 18mm; }
+  :root {
+    --tinta: #1f2933; --suave: #52606d; --acento: #c2410c; --acento-claro: #fff1e8;
+    --linea: #d9dee3; --fondo-tabla: #f5f7fa;
+  }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; }
+  body { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; color: var(--tinta); font-size: 10.5pt; line-height: 1.5; }
+
+  /* Portada: ocupa la primera página completa */
+  .portada { height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always;
+             border-left: 10mm solid var(--acento); padding: 0 0 0 14mm; }
+  .portada .marca { text-transform: uppercase; letter-spacing: .18em; font-size: 9pt; color: var(--acento); font-weight: 700; margin-bottom: 8mm; }
+  .portada h1 { font-size: 30pt; line-height: 1.15; margin: 0 0 10mm 0; color: var(--tinta); }
+  .portada .meta { color: var(--suave); font-size: 11pt; max-width: 150mm; }
+  .portada .meta p { margin: 0 0 3mm 0; }
+  .portada blockquote { margin: 6mm 0 0 0; padding: 4mm 5mm; background: var(--acento-claro); border: 0; border-radius: 2mm; font-size: 9.5pt; }
+
+  /* Cuerpo */
+  h2 { font-size: 15pt; color: var(--acento); border-bottom: 1.5pt solid var(--acento); padding-bottom: 1.5mm; margin: 9mm 0 4mm; page-break-after: avoid; }
+  main > h2:first-child { margin-top: 0; }
+  h3 { font-size: 12pt; margin: 6mm 0 2mm; page-break-after: avoid; }
+  p, ul, ol { margin: 0 0 3mm 0; }
+  li { margin-bottom: 1mm; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 9pt; background: var(--fondo-tabla); padding: .2mm 1mm; border-radius: 1mm; }
+  pre { background: var(--tinta); color: #f5f7fa; padding: 4mm; border-radius: 2mm; font-size: 9pt; page-break-inside: avoid; white-space: pre-wrap; }
+  pre code { background: none; color: inherit; padding: 0; }
+  blockquote { margin: 4mm 0; padding: 3mm 5mm; border-left: 3pt solid var(--acento); background: var(--acento-claro); color: var(--suave); }
+  blockquote p { margin: 0; }
+
+  table { width: 100%; border-collapse: collapse; margin: 3mm 0 5mm; font-size: 9pt; }
+  thead { display: table-header-group; }
+  tr { page-break-inside: avoid; }
+  th { background: var(--tinta); color: #fff; text-align: left; font-weight: 600; padding: 2mm 2.5mm; }
+  td { padding: 2mm 2.5mm; border-bottom: .5pt solid var(--linea); vertical-align: top; }
+  tbody tr:nth-child(even) td { background: var(--fondo-tabla); }
+</style>
+</head>
+<body>
+  <section class="portada">
+    <div class="marca">{{marca}}</div>
+    <h1>{{titulo}}</h1>
+    <div class="meta">{{portada}}</div>
+  </section>
+  <main>
+{{contenido}}
+  </main>
+</body>
+</html>
