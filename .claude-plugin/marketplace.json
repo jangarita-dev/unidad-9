@@ -1,0 +1,12 @@
+{
+  "name": "pedidos-jangarita-dev",
+  "owner": { "name": "jangarita-dev" },
+  "description": "Marketplace de Pedidos Web: el playbook para que los equipos de la BU trabajen igual",
+  "plugins": [
+    {
+      "name": "pedidos-playbook",
+      "source": "./plugins/pedidos-playbook",
+      "description": "Forma de trabajar de Pedidos Web: revisor, skills, guardián, MCP de Claude Academy y plantillas"
+    }
+  ]
+}
